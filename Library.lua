@@ -860,7 +860,7 @@ end
                                 BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                                 BorderColor3 = Color3.fromRGB(0, 0, 0),
                                 Position = UDim2.new(0, 40, 0, 10),
-                                Size = UDim2.new(0, 150, 0, 150),
+                                Size = UDim2.new(0, 125, 0, 125),
                                 AutoButtonColor = false,
                                 Image = "rbxassetid://4155801252",
                                 ImageColor3 = Color3.fromRGB(255, 0, 4),
