@@ -215,7 +215,7 @@ function library.new(library_title, cfg_location)
         BackgroundColor3 = Color3.fromRGB(255, 255, 255),
         BackgroundTransparency = 1,
         Position = UDim2.new(0, 12, 0, 41),
-        Size = UDim2.new(0, 85, 0, 447),
+        Size = UDim2.new(0, 76, 0, 447),
     }, ImageLabel)
     
     local UIListLayout = library:create("UIListLayout", {
@@ -261,7 +261,7 @@ end
             AnchorPoint = Vector2.new(0.5, 0.5),
             BackgroundTransparency = 1,
             Position = UDim2.new(0.5, 0, 0.5, 0),
-            Size = UDim2.new(0, 32, 0, 32),
+            Size = UDim2.new(0, 35, 0, 35),
             Image = tab_image,
             ImageColor3 = Color3.fromRGB(100, 100, 100),
         }, TabButton)
