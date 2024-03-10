@@ -253,7 +253,7 @@ end
         local TabButton = library:create("TextButton", {
             BackgroundColor3 = Color3.fromRGB(255, 255, 255),
             BackgroundTransparency = 1,
-            Size = UDim2.new(0, 89, 0, 86),
+            Size = UDim2.new(0, 76, 0, 90),
             Text = "",
         }, TabButtons)
 
@@ -261,7 +261,7 @@ end
             AnchorPoint = Vector2.new(0.5, 0.5),
             BackgroundTransparency = 1,
             Position = UDim2.new(0.5, 0, 0.5, 0),
-            Size = UDim2.new(0, 89, 0, 86),
+            Size = UDim2.new(0, 32, 0, 32),
             Image = tab_image,
             ImageColor3 = Color3.fromRGB(100, 100, 100),
         }, TabButton)
