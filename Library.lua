@@ -205,7 +205,7 @@ function library.new(library_title, cfg_location)
         Font = Enum.Font.Ubuntu,
         Text = library_title,
         TextColor3 = Color3.fromRGB(255, 255, 255),
-        TextSize = 16,
+        TextSize = 14,
         TextXAlignment = Enum.TextXAlignment.Left,
         RichText = true,
     }, ImageLabel)
