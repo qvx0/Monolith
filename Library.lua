@@ -181,7 +181,7 @@ function library.new(library_title, cfg_location)
         Name = "Main",
         AnchorPoint = Vector2.new(0.5, 0.5),
         BackgroundColor3 = Color3.fromRGB(15, 15, 15),
-        BorderColor3 = Color3.fromRGB(255, 255, 255),
+        BorderColor3 = Color3.fromRGB(10,10,10),
         Position = UDim2.new(0.5, 0, 0.5, 0),
         Size = UDim2.new(0, 700, 0, 500),
         Image = "http://www.roblox.com/asset/?id=7300333488",
@@ -653,7 +653,7 @@ end
                             end)
                             KeybindFrame.MouseEnter:Connect(function()
                                 keybind_in2 = true
-                                library:tween(KeybindFrame, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BorderColor3 = Color3.fromRGB(255, 255, 255)})
+                                library:tween(KeybindFrame, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BorderColor3 = Color3.fromRGB(10,10,10)})
                             end)
                             KeybindFrame.MouseLeave:Connect(function()
                                 keybind_in2 = false
@@ -914,7 +914,7 @@ end
                             end)
                             ColorFrame.MouseEnter:Connect(function()
                                 in_color = true
-                                library:tween(ColorFrame, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BorderColor3 = Color3.fromRGB(255, 255, 255)})
+                                library:tween(ColorFrame, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BorderColor3 = Color3.fromRGB(10,10,10)})
                             end)
                             ColorFrame.MouseLeave:Connect(function()
                                 in_color = false
@@ -1585,7 +1585,7 @@ end
                             library:tween(Button, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(150, 150, 150)})
                         end)
                         Button.MouseButton1Down:Connect(function()
-                            Button.BorderColor3 = Color3.fromRGB(255, 255, 255)
+                            Button.BorderColor3 = Color3.fromRGB(10,10,10)
                             library:tween(Button, TweenInfo.new(0.6, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BorderColor3 = Color3.fromRGB(0, 0, 0)})
                             do_callback()
                         end)
@@ -1645,7 +1645,7 @@ end
                         end)
                         uis.TextBoxFocused:connect(function()
                             if uis:GetFocusedTextBox() == TextBox then
-                                library:tween(TextBox, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BorderColor3 = Color3.fromRGB(255, 255, 255)})
+                                library:tween(TextBox, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BorderColor3 = Color3.fromRGB(10,10,10)})
                             end
                         end)
                         uis.TextBoxFocusReleased:connect(function()
