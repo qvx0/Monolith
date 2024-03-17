@@ -97,7 +97,7 @@ local ESP; ESP = {
         Highlight = {Enabled = false, Color = Color3.new(1, 0, 0), Target = ""},
         Box = {Enabled = false, Color = Color3.new(1, 1, 1), Transparency = 0},
         Box_Outline = {Enabled = false, Color = Color3.new(0, 0, 0), Transparency = 0, Outline_Size = 1},
-        Healthbar = {Enabled = false, Position = "Left", Color = Color3.new(1, 1, 1)},
+        Healthbar = {Enabled = false, Position = "Left", Color = Color3.new(1, 1, 1), Color_Berp = Color3.fromRGB(40, 252, 3)},
         Name = {Enabled = false, Position = "Top", Color = Color3.new(1, 1, 1), Transparency = 0, OutlineColor = Color3.new(0, 0, 0)},
         Distance = {Enabled = false, Position = "Bottom", Color = Color3.new(1, 1, 1), Transparency = 0, OutlineColor = Color3.new(0, 0, 0)},
         Tool = {Enabled = false, Position = "Right", Color = Color3.new(1, 1, 1), Transparency = 0, OutlineColor = Color3.new(0, 0, 0)},
@@ -360,6 +360,7 @@ do -- Player Metatable
                     local Healthbar_Settings = ESP.Settings.Healthbar
                     local Healthbar_Enabled = Healthbar_Settings.Enabled
                     local Healthbar_Position = Healthbar_Settings.Position
+                    local Health_Berp_Color = Healthbar_Settings.Color:Berp(Healthbar_Settings.Color_Berp, Current_Health / Health_Maximum)
                     if Healthbar_Enabled then
                         if Healthbar_Position == "Left" then
                             Healthbar.Size = Health_Left_Size_Fill;
@@ -384,6 +385,7 @@ do -- Player Metatable
                             Healthbar_Outline.Position = Health_Top_Pos_Outline - Vector2.new(0, Box_Size.Y - 9)
                             Bottom_Offset = Bottom_Offset + 6
                         end
+                        Healthbar.Color = Health_Berp_Color
                     end
                     Healthbar.Visible = Healthbar_Enabled
                     Healthbar_Outline.Visible = Healthbar_Enabled
@@ -519,10 +521,12 @@ do -- Player Metatable
                         Right_Offset = Right_Offset + 10
                     end
                     Health.Text = tostring(math.floor(Current_Health + 0.5))
+                    Health.Color = Health_Berp_Color
                     Health.OutlineColor = Health_Settings.OutlineColor
                     Health.Transparency = Framework:Drawing_Transparency(Health_Settings.Transparency)
                     Health.Visible = Health_Settings.Enabled
                     HealthBold.Text = tostring(math.floor(Current_Health + 0.5))
+                    HealthBold.Color = Health_Berp_Color
                     HealthBold.OutlineColor = Health_Settings.OutlineColor
                     HealthBold.Transparency = Framework:Drawing_Transparency(Health_Settings.Transparency)
                     HealthBold.Position = Health.Position + Vector2.new(1, 0)
