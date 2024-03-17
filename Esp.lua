@@ -360,7 +360,6 @@ do -- Player Metatable
                     local Healthbar_Settings = ESP.Settings.Healthbar
                     local Healthbar_Enabled = Healthbar_Settings.Enabled
                     local Healthbar_Position = Healthbar_Settings.Position
-                    local Health_Lerp_Color = Healthbar_Settings.Color:Lerp(Healthbar_Settings.Color_Lerp, Current_Health / Health_Maximum)
                     if Healthbar_Enabled then
                         if Healthbar_Position == "Left" then
                             Healthbar.Size = Health_Left_Size_Fill;
@@ -385,7 +384,6 @@ do -- Player Metatable
                             Healthbar_Outline.Position = Health_Top_Pos_Outline - Vector2.new(0, Box_Size.Y - 9)
                             Bottom_Offset = Bottom_Offset + 6
                         end
-                        Healthbar.Color = Health_Lerp_Color
                     end
                     Healthbar.Visible = Healthbar_Enabled
                     Healthbar_Outline.Visible = Healthbar_Enabled
@@ -521,12 +519,10 @@ do -- Player Metatable
                         Right_Offset = Right_Offset + 10
                     end
                     Health.Text = tostring(math.floor(Current_Health + 0.5))
-                    Health.Color = Health_Lerp_Color
                     Health.OutlineColor = Health_Settings.OutlineColor
                     Health.Transparency = Framework:Drawing_Transparency(Health_Settings.Transparency)
                     Health.Visible = Health_Settings.Enabled
                     HealthBold.Text = tostring(math.floor(Current_Health + 0.5))
-                    HealthBold.Color = Health_Lerp_Color
                     HealthBold.OutlineColor = Health_Settings.OutlineColor
                     HealthBold.Transparency = Framework:Drawing_Transparency(Health_Settings.Transparency)
                     HealthBold.Position = Health.Position + Vector2.new(1, 0)
